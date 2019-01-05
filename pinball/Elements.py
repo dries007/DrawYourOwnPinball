@@ -345,13 +345,14 @@ class Flipper(Element):
         self.min_angle = math.radians(self.min_angle)
         self.max_angle = math.radians(self.max_angle)
         self.angle_step = math.radians(self.angle_step)
+        self.angle = math.radians(90)
 
         if not self.is_left:
             self.min_angle *= -1
             self.max_angle *= -1
             self.angle_step *= -1
+            self.angle *= -1
 
-        self.angle = self.min_angle
         self.end_x = 0
         self.end_y = 0
         self.update_end()

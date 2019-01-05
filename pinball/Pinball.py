@@ -338,7 +338,7 @@ class Pinball:
         skip_elements = len(self.elements)
 
         print("Detecting pop bumpers...")
-        for cx, cy, r in detect_circles(gray, 30, 25, 50):
+        for cx, cy, r in detect_circles(gray, 30, 25, 100):
             color = (random.randint(50, 255), random.randint(50, 255), random.randint(50, 255))
             self.elements.append(PopBumper((int(cx), int(cy)), color, int(r)))
 
